@@ -1,0 +1,418 @@
+body {
+  font-family: 'Lato', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.decor-white {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.decor-white .line {
+  border-top: 3px solid white;
+  width: 100px;
+}
+
+.decor-white .fa {
+  font-size: 30px;
+  padding: 20px;
+  color: white;
+}
+
+#nav-bar {
+  background: #16324F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-transform: uppercase;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+#nav-bar .start {
+  font-size: 22px;
+  color: white;
+}
+
+#nav-bar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 400px;
+  list-style: none;
+  margin: 15px;
+}
+
+#nav-bar ul a {
+  text-decoration: none;
+  color: white;
+}
+
+#nav-bar ul a:hover {
+  text-decoration: underline;
+}
+
+#header {
+  background-color: #4281a4;
+  color: white;
+  padding: 50px 0px;
+}
+
+#header img {
+  width: 230px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header h2 {
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+#header p {
+  text-transform: capitalize;
+  font-size: 20px;
+  text-align: center;
+}
+
+#portfolio h2 {
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 50px;
+  text-align: center;
+  color: #16324F;
+}
+
+#portfolio .decor-white .line {
+  border-top: solid 3px #16324F;
+}
+
+#portfolio .decor-white .fa {
+  color: #16324F;
+}
+
+#portfolio .gallery {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#portfolio .gallery .img1 {
+  background-image: url(./images/1.PNG);
+}
+
+#portfolio .gallery .img2 {
+  background-image: url(./images/2.PNG);
+}
+
+#portfolio .gallery .img3 {
+  background-image: url(./images/3.PNG);
+}
+
+#portfolio .gallery .img4 {
+  background-image: url(./images/4.PNG);
+}
+
+#portfolio .gallery .img5 {
+  background-image: url(./images/5.PNG);
+}
+
+#portfolio .gallery .img6 {
+  background-image: url(./images/6.PNG);
+}
+
+#portfolio .gallery .img {
+  width: 350px;
+  margin: 30px;
+  height: 250px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#portfolio .gallery .img:hover .text {
+  display: inline;
+  text-decoration: underline;
+  font-size: 20px;
+  color: #16324F;
+}
+
+#portfolio .gallery .img .text {
+  display: none;
+}
+
+#portfolio .gallery .img:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+#about .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #4281a4;
+  color: white;
+  padding-bottom: 20px;
+}
+
+#about .content h2 {
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+#about .content p {
+  max-width: 800px;
+  font-size: 20px;
+  margin: 20px;
+}
+
+#about .content button {
+  width: 170px;
+  height: 45px;
+  background-color: #4281a4;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  color: white;
+}
+
+#about .content button:hover {
+  color: #16324F;
+  background-color: #256385;
+  cursor: pointer;
+  border: 2px solid #16324F;
+}
+
+#about .content .hide {
+  display: none;
+}
+
+#testimonials .reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px 0px;
+}
+
+#testimonials .reviews .review {
+  border: 2px solid #16324F;
+  border-radius: 5px;
+  margin: 10px 25px;
+  width: 300px;
+  font-style: italic;
+  color: #16324F;
+  padding: 10px;
+}
+
+#testimonials .reviews .review:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-box-shadow: 3px 3px 3px #888888;
+          box-shadow: 3px 3px 3px #888888;
+}
+
+#testimonials .reviews .review img {
+  margin-top: 10px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+
+#testimonials .reviews .review i {
+  font-size: 30px;
+  color: #4281a4;
+}
+
+#testimonials .reviews .review .author {
+  text-align: right;
+}
+
+#testimonials .decor-white .line {
+  border-top: solid 3px #16324F;
+}
+
+#testimonials .decor-white .fa {
+  color: #16324F;
+}
+
+#testimonials h2 {
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 50px;
+  text-align: center;
+  color: #16324F;
+}
+
+#contact .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #16324F;
+  color: white;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+#contact .content .left .fa,
+#contact .content .right .fa {
+  color: #4281a4;
+  font-size: 20px;
+}
+
+#contact .content div {
+  width: 300px;
+  text-align: center;
+}
+
+#contact .content div h2 {
+  text-transform: uppercase;
+}
+
+#contact .content .mid i {
+  font-size: 30px;
+  width: 30px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+#contact .content .mid i:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+#contact .content .mid .fa-facebook {
+  background-color: #4267b2;
+}
+
+#contact .content .mid .fa-twitter {
+  color: #1da1f2;
+  background-color: white;
+}
+
+#contact .content .mid .fa-youtube-play {
+  color: #ff0000;
+  background-color: white;
+}
+
+#footer {
+  background-color: #122841;
+  color: white;
+  text-align: center;
+}
+
+#footer p {
+  margin: 0px;
+  padding: 10px;
+}
+
+#hamburger {
+  display: none;
+}
+
+@media only screen and (max-width: 550px) {
+  #nav-bar .start {
+    display: none;
+  }
+  #nav-bar {
+    position: relative;
+  }
+  #nav-bar ul {
+    display: inline;
+    text-align: center;
+    padding: 0px;
+    margin: 5px;
+    font-size: 18px;
+  }
+  #nav-bar ul li {
+    padding: 5px;
+  }
+}
+
+#testimonials h2 {
+  font-size: 40px;
+}
+/*# sourceMappingURL=style.css.map */

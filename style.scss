@@ -1,0 +1,365 @@
+body {
+   font-family: 'Lato', sans-serif;
+   padding: 0;
+   margin: 0;
+}
+
+$darkBlue:#16324F;
+$lightBlue:#4281a4;
+
+@mixin center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.decor-white {
+   @include center;
+
+   .line {
+      border-top: 3px solid white;
+      width: 100px;
+   }
+
+   .fa {
+      font-size: 30px;
+      padding: 20px;
+      color: white;
+   }
+}
+
+
+
+@mixin title {
+   text-transform: uppercase;
+   font-size: 50px;
+   margin-bottom: 0px;
+   margin-top: 0px;
+   padding-top: 50px;
+   text-align: center;
+}
+
+@mixin wrap {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+@mixin hover {
+   cursor: pointer;
+   transform: scale(1.05);
+   transition: transform 0.3s ease-out;
+}
+
+#nav-bar {
+   background: $darkBlue;
+   display: flex;
+   justify-content: space-around;
+   text-transform: uppercase;
+   align-items: center;
+   width: 100%;
+   position: fixed;
+   z-index: 10;
+
+   .start {
+      font-size: 22px;
+      color: white;
+   }
+
+   ul {
+      display: flex;
+      justify-content: space-around;
+      width: 400px;
+      list-style: none;
+      margin: 15px;
+
+      a {
+         text-decoration: none;
+         color: white;
+
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+}
+
+#header {
+   background-color: $lightBlue;
+   color: white;
+   padding: 50px 0px;
+
+   img {
+      width: 230px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   h2 {
+      @include title
+   }
+
+   p {
+      text-transform: capitalize;
+      font-size: 20px;
+      text-align: center;
+   }
+}
+
+#portfolio {
+   h2 {
+      @include title;
+      color: $darkBlue;
+   }
+
+   .decor-white .line {
+      border-top: solid 3px $darkBlue;
+   }
+
+   .decor-white .fa {
+      color: $darkBlue;
+   }
+
+   .gallery {
+      max-width: 1300px;
+      margin: 0 auto;
+      @include wrap;
+
+      .img1 {
+         background-image: url(./images/1.PNG);
+      }
+
+      .img2 {
+         background-image: url(./images/2.PNG);
+      }
+
+      .img3 {
+         background-image: url(./images/3.PNG);
+      }
+
+      .img4 {
+         background-image: url(./images/4.PNG);
+      }
+
+      .img5 {
+         background-image: url(./images/5.PNG);
+      }
+
+      .img6 {
+         background-image: url(./images/6.PNG);
+      }
+
+      .img {
+         width: 350px;
+         margin: 30px;
+         height: 250px;
+         border-radius: 10px;
+         background-repeat: no-repeat;
+         background-position: center;
+         @include center;
+
+         &:hover .text {
+            display: inline;
+            text-decoration: underline;
+            font-size: 20px;
+            color: $darkBlue;
+         }
+
+         .text {
+            display: none;
+         }
+
+         &:hover {
+            @include hover;
+         }
+      }
+   }
+}
+
+#about {
+   .content {
+      @include center;
+      flex-direction: column;
+      background: $lightBlue;
+      color: white;
+      padding-bottom: 20px;
+
+      h2 {
+         @include title;
+      }
+
+      p {
+         max-width: 800px;
+         font-size: 20px;
+         margin: 20px;
+      }
+
+      button {
+         width: 170px;
+         height: 45px;
+         background-color: $lightBlue;
+         border: 2px solid white;
+         border-radius: 5px;
+         font-size: 18px;
+         text-transform: capitalize;
+         margin-bottom: 20px;
+         color: white;
+
+         &:hover {
+            color: $darkBlue;
+            background-color: rgb(37, 99, 133);
+            cursor: pointer;
+            border: 2px solid $darkBlue;
+         }
+      }
+
+      .hide {
+         display: none;
+      }
+   }
+}
+
+#testimonials .reviews {
+   @include wrap;
+   margin: 30px 0px;
+
+   .review {
+      border: 2px solid $darkBlue;
+      border-radius: 5px;
+      margin: 10px 25px;
+      width: 300px;
+      font-style: italic;
+      color: $darkBlue;
+      padding: 10px;
+
+      &:hover {
+         @include hover;
+         box-shadow: 3px 3px 3px #888888;
+      }
+
+      img {
+         margin-top: 10px;
+         height: 150px;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         border-radius: 50%;
+      }
+
+      i {
+         font-size: 30px;
+         color: $lightBlue;
+      }
+
+      .author {
+         text-align: right;
+      }
+   }
+}
+
+#testimonials {
+   .decor-white .line {
+      border-top: solid 3px $darkBlue;
+   }
+
+   .decor-white .fa {
+      color: $darkBlue;
+   }
+
+   h2 {
+      @include title;
+      color: $darkBlue;
+   }
+}
+
+#contact .content {
+   @include wrap;
+   background-color: $darkBlue;
+   color: white;
+   padding-bottom: 20px;
+   padding-top: 30px;
+
+   .left,
+   .right {
+      .fa {
+         color: $lightBlue;
+         font-size: 20px;
+      }
+   }
+
+   div {
+      width: 300px;
+      text-align: center;
+
+      h2 {
+         text-transform: uppercase;
+      }
+   }
+
+   .mid i {
+      font-size: 30px;
+      width: 30px;
+      border-radius: 50%;
+      padding: 5px;
+
+      &:hover {
+         @include hover;
+      }
+   }
+
+   .mid .fa-facebook {
+      background-color: #4267b2;
+   }
+
+   .mid .fa-twitter {
+      color: #1da1f2;
+      background-color: white;
+   }
+
+   .mid .fa-youtube-play {
+      color: #ff0000;
+      background-color: white;
+   }
+}
+
+#footer {
+   background-color: rgb(18, 40, 65);
+   color: white;
+   text-align: center;
+
+   p {
+      margin: 0px;
+      padding: 10px;
+   }
+}
+
+#hamburger {
+   display: none;
+}
+
+@media only screen and (max-width: 550px) {
+   #nav-bar .start {
+      display: none;
+   }
+
+   #nav-bar {
+      position: relative;
+   }
+
+   #nav-bar ul {
+      display: inline;
+      text-align: center;
+      padding: 0px;
+      margin: 5px;
+      font-size: 18px;
+
+      li {
+         padding: 5px;
+      }
+   }
+}
+
+#testimonials h2 {
+   font-size: 40px;
+}
